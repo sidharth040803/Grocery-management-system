@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Customer-Name: {{session['username']}}</h1>
+    <h1>Address:{{address[0]}}</h1>
+</body>
+<table>
+    <tr>
+        <th>PRODUCT</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    {% for item in data %}
+    <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+
+    </tr>
+    
+    {% endfor  %}  
+</table>
+<label for="sum">totalsum:{{sum}}</label>
+
+<form action="/orders">
+    <input type="submit"  value='confirm' name="" id="">
+</form>
+
+
+</html>

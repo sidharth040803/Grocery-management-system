@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalnia&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body{
+        overflow: scroll;
+        
+     }
+     img.first{
+     width: 180px;
+     height: 180px;
+     object-fit: cover;
+     border-radius: 100%;
+     padding: 20px;
+     }
+     
+    .row1{
+        margin-left: 20px;
+        height: 220px;
+        width:100%;
+    }
+    .row2{
+        margin-left: 20px;
+        height: 220px;
+        width:100%;
+    }
+    button {
+  background-color: #04AA6D;
+  width:200px;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: "DM Serif Display";
+  margin: 4px 40px;
+  cursor: pointer;
+  transition: all 1000ms;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+   }
+   button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  
+}
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #7be96d;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+   .first{
+    margin-left: 60px;
+    
+   }
+   .last{
+    margin-left: 60px;
+    
+   }
+  
+
+#head{
+ 
+    height:100px;
+    color: rgb(13, 165, 28);
+    font-size: 70px;
+    text-align: center;
+    
+    font-family: "Kalnia";
+}
+
+</style>
+</head>
+<body>
+    <div id="head">Shop by Category</div>
+    <div class="row1">
+        <img src="../static/images/fruits.jpg" class="first"/>
+        <img src="../static/images/dairy.jpg" class="first" />
+        <img src="../static/images/vegetables.jpg" class="first"/>
+        <img src="../static/images/spices.jpg" class="first"/>
+        <img src="../static/images/Rice.jpg" class="first"/>
+       </div>
+    <div class="first">
+        <button><a href="{{url_for('fruits')}}">FRUITS</a></button>
+        <button><a href="{{url_for('diary')}}">Diary & Bread</a></button>
+        <button><a href="{{url_for('vegetables')}}">Vegetables</a></button>
+        <button>Oil & spices</button>
+        <button>Rice & Dal</button>
+    </div>
+    <div class="row2">
+        <img src="../static/images/nutrition.jpg" class="first"/>
+        <img src="../static/images/chocolates.jpg" class="first"/>
+        <img src="../static/images/snacks.jpg" class="first"/>
+        <img src="../static/images/tea.jpg" class="first"/>
+        <img src="../static/images/meat.jpg" class="first"/>
+    </div>
+    <div class="last">
+            <button>Nutrition</button>
+            <button>Chocolates</button>
+            <button>Snacks & Biscuits</button>
+            <button>Tea & coffee</button>
+            <button>Meat & Fish</button>
+
+    </div>
+</body>
+</html>
