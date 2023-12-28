@@ -1,0 +1,144 @@
+create database shopping;
+use shopping;
+
+
+CREATE TABLE vegetables (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(255) NOT NULL,
+    price integer
+);
+INSERT INTO Vegetables (ProductID, ProductName, Price)
+VALUES
+    (121, 'Carrot', 21),
+    (456, 'Broccoli', 22),
+    (709, 'Tomato', 21),
+    (214, 'Spinach', 22),
+    (567, 'Cucumber', 21),
+    (345, 'Bell Pepper', 21),
+    (678, 'Zucchini', 21),
+    (124, 'Lettuce', 22),
+    (457, 'Onion', 21),
+    (780, 'Cauliflower', 22),
+    (234, 'Potato', 21),
+    (563, 'Garlic', 21),
+    (305, 'Mushroom', 22),
+    (608, 'Sweet Potato', 21),
+    (123, 'Radish', 21),
+    (406, 'Green Bean', 22),
+    (789, 'Cabbage', 21),
+    (204, 'Asparagus', 22),
+    (569, 'Kale', 22),
+    (341, 'Eggplant', 22);
+
+drop  table vegetables;
+desc vegetables;
+select * from vegetables;
+
+CREATE TABLE fruits (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(255) NOT NULL,
+    Price INT  NOT NULL
+);
+
+INSERT INTO fruits (ProductID, ProductName, Price) VALUES
+(101, 'Apple', 20),
+(202, 'Banana', 30),
+(321, 'Orange', 49),
+(401, 'Grapes', 79),
+(512, 'Strawberry', 19),
+(603, 'Watermelon', 79),
+(712, 'Pineapple', 79),
+(854, 'Mango', 13),
+(923, 'Kiwi', 27),
+(104, 'Peach', 24),
+(112, 'Plum', 67),
+(128, 'Cherry', 78),
+(139, 'Pear', 99),
+(140, 'Blueberry', 43),
+(154, 'Raspberry', 65),
+(169, 'Cantaloupe', 59),
+(172, 'Avocado', 43),
+(185, 'Lemon', 38),
+(194, 'Grapefruit', 12),
+(201, 'Pomegranate', 75);
+desc fruits;
+drop table fruits;
+select * from fruits;
+
+create table cart(
+	productid int,
+	productname varchar(30) ,
+    quantity int,
+    price int 
+
+);
+create table register(
+	username varchar(30),
+    phone_no varchar(225),
+    email varchar(220),
+    password varchar(225),
+    address varchar(50),
+    nationality varchar(225)
+);
+select * from register;
+truncate register;
+drop table register;
+create table orders(
+cust_name varchar(30),
+price int,
+date_and_time timestamp
+);
+desc orders;
+drop table orders;
+select * from orders;
+truncate orders;
+
+
+drop table register;
+
+drop table cart;
+desc cart;
+select * from cart;
+delete from cart;
+create table diary(
+ProductID INT PRIMARY KEY,
+ProductName VARCHAR(255) NOT NULL,
+Price integer
+);
+INSERT INTO diary (ProductID, ProductName, Price)
+VALUES
+    (150, 'Chocolate Milk', 22),
+    (252, 'Feta Cheese', 35),
+    (350, 'Greek Yogurt', 24),
+    (450, 'Ghee', 29), 
+    (200, 'Whipped Cream', 23), 
+    (300, 'Sour Cream', 26),
+    (400, 'Cottage Cheese', 27),
+    (120, 'Almond Milk', 24),
+    (220, 'Brie Cheese', 33),
+    (320, 'Coconut Yogurt', 21),
+    (121, 'Bagel', 28),
+    (221, 'Pita Bread', 23),
+    (321, 'Ciabatta', 31),
+    (421, 'Sourdough', 29),
+    (131, 'English Muffin', 26),
+    (231, 'Raisin Bread', 24),
+    (331, 'Garlic Bread', 22),
+    (431, 'Naan', 30),
+    (141, 'Cinnamon Swirl Bread', 27),
+    (241, 'Whole Grain Baguette', 32),
+
+    (170, 'Condensed Milk', 26),
+    (270, 'Blue Cheese', 38),
+    (370, 'Probiotic Drink', 23),
+    (470, 'Margarine', 27),
+    (190, 'Hazelnut Creamer', 21),
+    (151, 'Sesame Seed Bread', 25),
+    (250, 'Rye Crispbread', 22),
+    (355, 'Flatbread', 30),
+    (455, 'Brioche', 28),
+    (160, 'Sunflower Seed Bread', 26);
+    select * from diary;
+
+
+
