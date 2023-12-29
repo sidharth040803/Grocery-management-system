@@ -225,3 +225,60 @@
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
   }
+
+  th{
+    border-bottom: 1px solid black ;
+  }
+  
+  table, td {
+    border: 0;
+    text-align: center;
+  }
+
+  h2{
+    text-align: center;
+  }
+
+  h3{
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   border-bottom: solid;
+   border-bottom-width: 20px;
+   border-bottom-color: #4caf50;
+   margin-top:  0;
+   padding-left: 10px;
+   
+   background-color: #4caf50;
+   color: white;
+   font-size: 35px;
+  }
+
+  .card {
+    border-style: solid;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    width: 300px;
+    
+    margin: 20px auto 20px auto;
+    box-shadow: 0 2px 4px #4caf50 ;
+  }
+
+  body{
+    border-top: solid;
+    border-top-width: 20px;
+    border-top-color: #4caf50;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  input[type=submit] {
+    color: white;
+    background-color: #4caf50;
+  }
+
+  .card .head{
+    margin-top: 0;
+    padding-left: 0;
+    text-align: left;
+  }

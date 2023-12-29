@@ -10,15 +10,15 @@ app.secret_key = "yoursecretkey"
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="sidharth",
-    database="shopping"
+    password="Root123*",
+    database="grocery"
 )
 mycursor = db.cursor()
 
 
 @app.route('/')
 def home():
-    return render_template('login.html')
+    return redirect(url_for('fruits'))
 
 @app.route('/fruits')
 def fruits():

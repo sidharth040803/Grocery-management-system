@@ -3,8 +3,8 @@ from flask import flash, Flask, render_template, redirect, url_for, request
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="sidharth",
-    database="shopping"
+    password="Root123*",
+    database="grocery"
 )
 mycursor = db.cursor()
 
