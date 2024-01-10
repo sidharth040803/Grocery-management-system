@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalnia&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalnia&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body{
+        overflow: scroll;
+        background-color: #C1F2B0;
+        
+     }
+     img.first{
+     width: 180px;
+     height: 180px;
+     object-fit: cover;
+     border-radius: 100%;
+     padding: 20px;
+     }
+     
+    .row1{
+        margin-left: 20px;
+        height: 220px;
+        width:100%;
+        
+    }
+    #row1{
+        border-radius: 40px;
+    }
+    .row2{
+        margin-left: 20px;
+        height: 220px;
+        width:100%;
+    }
+    button {
+  background-color: #04AA6D;
+  width:200px;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: "DM Serif Display";
+  margin: 4px 40px;
+  cursor: pointer;
+  transition: all 1000ms;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+   }
+   button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  
+}
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #7be96d;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+   .first{
+    margin-left: 60px;
+    
+   }
+   .last{
+    margin-left: 60px;
+    
+   }
+  
+
+#head{
+     padding-top: 250px;
+    height:100px;
+    color: rgb(13, 165, 28);
+    font-size: 70px;
+    text-align: center;
+    
+    font-family: "Kalnia";
+}
+
+.second{
+            float: left;
+           }
+        #row1{
+            width:100%;
+            height:70px;
+            background-color: rgb(252, 252, 252);
+        }
+        #grocery{
+            text-align: center;
+            color: rgb(21, 166, 28);
+            font-size: 40px;
+            font-family: Kalnia;
+            padding-left: 50px;
+        }
+        #options{
+            width:500px;
+            text-align: center;
+            padding-left: 170px;
+            color: rgb(21, 166, 28);
+            font-size: 20px;
+            font-family: Kalnia;
+            margin: 20px 80px;
+            word-spacing: 20px;
+            text-decoration: none;
+        }
+        a:link {
+        text-decoration: none;
+        color: rgb(21, 166, 28);
+        }
+        
+         #manage{
+    height:120px;
+    text-align:center;
+    color: rgb(21, 166, 28);
+            font-size: 70px;
+            font-family: Playfair Display;
+            padding-top: 170px;;
+            
+}   
+
+#options a {
+      display: inline-block;
+      overflow: hidden;
+      transition: transform 0.3s ease-out;
+      margin: 0 10px; 
+      text-decoration: none;
+    }
+
+    #options a:hover {
+      transform: scale(1.2); 
+    }
+#system{
+    height:40px;
+    text-align:center;
+    color: rgb(21, 166, 28);
+            font-size: 40px;
+            font-family:"Dosis";
+}  
+#end{
+    padding-left: 50px;
+} 
+button.top{
+  background-color: #04AA6D;
+  width:160px;
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: "DM Serif Display";
+  margin: 2px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 1000ms;
+  position: relative;
+  overflow: hidden;
+}
+#row4{
+    background-color: #efeee8;
+    height:400px;
+    margin:auto;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+button a{
+    color: white;
+    
+}
+
+.gap1{
+    float:left;
+    height:400px;
+    
+    background-color: #90EE90;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+        align-items: center;
+      
+        justify-content: center; 
+      
+        text-align: center;
+   
+    
+}
+
+
+
+#gap1{
+    height:450px;
+    width:700px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+</style>
+</head>
+<body>
+    <div id="row1">
+        <div id="grocery" class="second">Grocery</div>
+        <div id="options"class="second">
+            <a class="active" href="#home">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#product">Products</a>
+            
+        </div>
+        <div class="second" id="end">
+            {% if not name: %}
+            <button class="top" style="margin-top: 10px;"><a href="{{url_for('log')}}">Login</a></button>
+            <button class="top" style="margin-top: 10px;"><a href="{{url_for('reg')}}">Register</a></button>
+            {% endif %}
+            {% if name: %}
+            <button class="top" style="width: 180px; margin-left: 130px; margin-top: 10px;">{{name}}</button>
+            {% endif  %}
+        </div>
+    </div>
+    <div id="row2">
+       <div id="manage">Manage your grocery shopping</div> 
+       <div id="system">Grocery management system</div>
+       <div style="padding-top: 50px;padding-bottom: 200px;">
+        <form method="get" action="#head">
+            <button type="submit" style="width:200px;margin-left: 650px;" >Shop now</button>
+        </form>
+        
+       </div>
+    </div>
+
+    <div id="row4">
+        <div class="gap1"><img src="../static/images/WhatsApp Image 2023-12-31 at 03.05.53.jpeg" id="gap1"/></div>
+        <div class="gap1" style="margin: auto; width:50%; "> "Grocery shopping is like a treasure hunt for foodies". We provide fresh and good quality food products with minimum delivery time. All your ingredients are available at your fingertips!Shop now! </div>
+        
+        
+     </div>   
+    
+    
+    
+        </div>
+      </div>
+    <div id="head">Shop by Category</div>
+    <div class="row1">
+        <img src="../static/images/fruits.jpg" class="first"/>
+        <img src="../static/images/dairy.jpg" class="first" />
+        <img src="../static/images/vegetables.jpg" class="first"/>
+        <img src="../static/images/spices.jpg" class="first"/>
+        <img src="../static/images/Rice.jpg" class="first"/>
+       </div>
+    <div class="first">
+        <button><a href="{{url_for('fruits')}}">Fruits</a></button>
+        <button><a href="{{url_for('diary')}}">Diary & Bread</a></button>
+        <button><a href="{{url_for('vegetables')}}">Vegetables</a></button>
+        <button><a href="{{url_for('spices')}}">Oil & Spices</a></button>
+        <button><a href="{{url_for('rice')}}">Rice</a></button>
+    </div>
+    <div class="row2">
+        <img src="../static/images/nutrition.jpg" class="first"/>
+        <img src="../static/images/chocolates.jpg" class="first"/>
+        <img src="../static/images/snacks.jpg" class="first"/>
+        <img src="../static/images/tea.jpg" class="first"/>
+        <img src="../static/images/meat.jpg" class="first"/>
+    </div>
+    <div class="last">
+            <button><a href="{{url_for('nutrition')}}">Nutrition</a></button>
+            <button><a href="{{url_for('chocolates')}}">Chocolates</a></button>
+            <button><a href="{{url_for('snacks')}}" style="color: white;">Snacks & Biscuits</a></button>
+            <button><a href="{{url_for('coffee')}}">Tea & coffee</a></button>
+            <button><a href="{{url_for('meat')}}">Meat & Fish</a></button>
+
+    </div>
+</body>
+</html>

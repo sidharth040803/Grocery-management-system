@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/meat.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meat</title>
+</head>
+<body>
+  
+    <div class="animation-container">
+        <h1 class="slide-in">Meat</h1>
+        <h1 class="fade-in">Welcome {{session['username']}}</h1>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+                <tr>
+                    <td>{{ item[0] }}</td>
+                    <td>{{ item[1] }}</td>
+                    <td class="price" data-unit-price="{{ item[2] }}">{{ item[2] }}</td>
+                    <form action="{{url_for('add_to_cart',productid=item[0],productname=item[1],productprice=item[2])}}" method="post">
+                    <td>
+                        <input type="number" class="quantity" name="quantity" value="1" step="1" min="1" max="10" 
+                               onchange="updateTotalPrice(this.parentNode.parentNode)">
+                        
+                        <input type="submit" value="ADD TO CART">
+                    </td>
+                    
+                </form>
+                    
+                   
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="sum-box">
+        <label for="totalsum">Sum:</label>
+        <input type="text" id="totalsum" value="{{sum}}" readonly>
+    </div>
+    <form action="/billing" method="post">
+        <input type="submit">
+    </form>
+    
+
+
+
+    <script>
+        function updateTotalPrice(row) {
+    var quantityInput = row.querySelector('.quantity');
+    var priceCell = row.querySelector('.price');
+
+    var unitPrice = parseFloat(priceCell.dataset.unitPrice); 
+    var quantity = parseInt(quantityInput.value);
+    var totalPrice = parseInt(unitPrice * quantity); 
+
+    priceCell.textContent = totalPrice.toFixed(2); 
+}
+
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meat</title>
+</head>
+<body>
+    <style>
+       body {
+        font-family: 'Arial', sans-serif;
+        background: white;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        animation: moveDown 0.5s ease-in-out; 
+    }
+
+   
+    
+
+    h1 {
+        font-size: 2em;
+        color: #2ecc71; 
+        text-align: center;
+        margin: 10px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700; 
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #55efc4; 
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #2ecc71; 
+        color: #fff;
+    }
+
+    .quantity {
+        width: 50px;
+        padding: 8px;
+        text-align: center;
+    }
+
+    input[type="number"] {
+        width: 50px;
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #55efc4; 
+        border-radius: 4px;
+        outline: none;
+    }
+    .animation-container {
+    text-align: center;
+}
+
+.slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 1.5s ease-in-out forwards;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards 1.5s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+    input[type="submit"] {
+        background-color: #2ecc71; 
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #27ae60; 
+    }
+
+    .sum-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    label {
+        margin-right: 10px;
+    }
+
+    #totalsum {
+        width: 100px;
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #55efc4; 
+        border-radius: 4px;
+        outline: none;
+    }
+
+    form {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+
+
+    </style>
+     <div class="animation-container">
+        <h1 class="slide-in">Chocolates</h1>
+        <h1 class="fade-in">Welcome {{session['username']}}</h1>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+                <tr>
+                    <td>{{ item[0] }}</td>
+                    <td>{{ item[1] }}</td>
+                    <td class="price" data-unit-price="{{ item[2] }}">{{ item[2] }}</td>
+                    <form action="{{url_for('add_to_cart',productid=item[0],productname=item[1],productprice=item[2])}}" method="post">
+                    <td>
+                        <input type="number" class="quantity" name="quantity" value="1" step="1" min="1" max="10" 
+                               onchange="updateTotalPrice(this.parentNode.parentNode)">
+                        
+                        <input type="submit" value="ADD TO CART">
+                    </td>
+                    
+                </form>
+                    
+                   
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="sum-box">
+        <label for="totalsum">Sum:</label>
+        <input type="text" id="totalsum" value="{{sum}}" readonly>
+    </div>
+    <form action="/billing" method="post">
+        <input type="submit">
+    </form>
+    
+
+
+
+    <script>
+        function updateTotalPrice(row) {
+    var quantityInput = row.querySelector('.quantity');
+    var priceCell = row.querySelector('.price');
+
+    var unitPrice = parseFloat(priceCell.dataset.unitPrice); 
+    var quantity = parseInt(quantityInput.value);
+    var totalPrice = parseInt(unitPrice * quantity); 
+
+    priceCell.textContent = totalPrice.toFixed(2); 
+}
+
+    </script>
+
+</body>
+</html>
+

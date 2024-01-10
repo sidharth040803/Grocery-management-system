@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{{url_for('register')}}"  method="POST" autocomplete="off">
+        <input type="text" name="username" placeholder="Enter username" autocomplete="off">
+        <input type="number" name="number" placeholder="Enter phone no" autocomplete="off">
+        <input type="email" name="email" placeholder="Enter Email" autocomplete="off">
+        <input type="password" name="password" placeholder="Enter Password" autocomplete="off">
+        <input type="text" name="address" placeholder="Enter address" autocomplete="off">
+        <input type="text" name="nation" placeholder="Enter nationality" autocomplete="off">
+        <input type="submit" placeholder="SUBMIT">
+        
+    </form>
+
+</body>
+</html>
